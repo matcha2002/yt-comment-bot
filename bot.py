@@ -123,40 +123,36 @@ def comment_page(driver,urls,comment):
 def random_comment():
 # You can edit these lines if you want to add more comments===================================
 	comments = [
-		'Check out my channel!',
-		'https://www.youtube.com/watch?v=0tPu7L_dxR4',
-		'https://www.youtube.com/watch?v=S1n9NlCDUbo&t=3s',
-		'https://www.youtube.com/watch?v=AAtUS0lLjvQ&t=4s',
-		'https://www.youtube.com/watch?v=AAtUS0lLjvQ&t=4s',	
-		'https://www.youtube.com/watch?v=PLQH3ibZZrY&t=11s',
-		'https://www.youtube.com/watch?v=PLQH3ibZZrY&t=11s',
-		'https://www.youtube.com/watch?v=PzbtaUyPpzQ&t=2s',
-		'https://www.youtube.com/watch?v=b5Uv0CNp1o0&t=2s',
-		'https://www.youtube.com/watch?v=AepFFzOIiKg&t=1s',
-		'https://www.youtube.com/watch?v=6eTLwJVGiR8&t=4s',
-		'https://www.youtube.com/watch?v=e83xe72_E3E',
-		'https://www.youtube.com/watch?v=fbOQX3QPz-M&t=26s',
-		'https://www.youtube.com/watch?v=ZQ5GYKqkEPg&t=16s',
-		'https://www.youtube.com/watch?v=5-hf1EsDMt0&t=4s',
-		'https://www.youtube.com/channel/UCuAjoGTTf7iaMixpiEdKFZQ',
-		'I also post a lot of videos like this',
-		'pls check out my channel',
-		'I have a tutorial of this on my channel',
-		'Learn how to make this bot on my channel',
-		'subscribe to my channel',
-		'subscribe to my channel for good luck',
-		'pls subscribe to my channel'
-
-
+		"Huge thanks for hosting this amazing giveaway!",
+		"This laptop would be a game-changer, and I'm so grateful for the chance to win. ",
+		"Your generosity is incredible, and I'm crossing my fingers for everyone! ",
+		"Just entered the giveaway, and wanted to say thank you for spreading holiday cheer! ",
+		"Seriously, you rock! This giveaway is the best Christmas present ever. ",
+		"Winning this laptop would change my life! Goodbye, slow desktop! ",
+		"Online classes and work would be a breeze with this beauty. ",
+		"Finally, I could edit my videos like a pro! ",
+		"Laptop envy? Gone. Thanks to this giveaway! ",
+		"New year, new laptop? Let's make it happen! ",
+		"Wishing everyone a Merry Christmas filled with joy and (maybe) a new laptop! ",
+		"May the spirit of Christmas bring good luck to everyone in this giveaway!",
+		"Sending warm wishes and holiday cheer to all the laptop hopefuls!",
+		"Let's spread some festive cheer and positive vibes! Merry Christmas! ",
+		"Santa better be bringing laptops this year, because I'm ready! ",
+		"May the luck of the draw be with you all! Good luck in the giveaway! ",
+		"Sending positive vibes to everyone! May the best comment win! ",
+		"Go get 'em, everyone! May the most passionate laptop lover win! ",
+		"Don't give up, dreamers! This laptop could be yours! ",
+		"Merry Christmas and good luck to all! May the odds be ever in your favor! ",
+		"Feeling festive and optimistic! Let's do this! "
 	]
-	a=0
-	while a<100000:
-		b=str(a)
-		comment='Sick Trickshot on mobile (MUST SEE!!)--> https://www.youtube.com/watch?v=hkNSJ2jMtNk&t=2s '+ b
+	#a=0
+	#while a<100000:
+		#b=str(a)
+		#comment='Sick Trickshot on mobile (MUST SEE!!)--> https://www.youtube.com/watch?v=hkNSJ2jMtNk&t=2s '+ b
 		#comment1='This video has great info on this topic--> https://www.youtube.com/watch?v=S1n9NlCDUbo&t=3s '+ b
 		#comment2='https://www.youtube.com/channel/UCuAjoGTTf7iaMixpiEdKFZQ?sub_confirmation=1 '+ b
 		#comment3='https://www.youtube.com/channel/UCuAjoGTTf7iaMixpiEdKFZQ?sub_confirmation=1 pls subscribe '+ b
-		comments.append(comment)
+		#comments.append(comment)
 		#comments.append(comment1)
 		#comments.append(comment2)
 		#comments.append(comment3)
@@ -184,7 +180,7 @@ def random_comment():
 		#comments.append(comment1)
 		#comments.append(comment2)
 		#comments.append(comment3)
-		a+=1
+		#a+=1
 # =============================================================================================
 	r = np.random.randint(0, len(comments))
 
@@ -255,4 +251,5 @@ if __name__ == '__main__':
 		if urls == []:
 			print("There is no videos for this keyword at the moment")
 		else:
-			comment_page(driver,urls,random_comment())
+			for i in range(1000000000000000):
+				comment_page(driver,urls,random_comment())
