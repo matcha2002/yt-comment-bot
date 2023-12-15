@@ -70,7 +70,7 @@ def comment_page(driver,urls,comment):
 		return []
 	
 	#gettin a video link from the list
-	url = urls.pop()
+	url = urls[0]
 	
 	driver.get(url)
 	print("Video url:" + url)
@@ -108,7 +108,7 @@ def comment_page(driver,urls,comment):
 	comment_box1 = driver.find_element_by_css_selector('#placeholder-area')
 	ActionChains(driver).move_to_element(comment_box1).click(comment_box1).perform()
 	add_comment_onit = driver.find_element_by_css_selector('#contenteditable-root')
-	add_comment_onit.send_keys(comment) 
+	add_comment_onit.send_keys(comment)
 	time.sleep(2) 
 	driver.find_element_by_css_selector('#submit-button').click()
 	print("done")
@@ -145,42 +145,40 @@ def random_comment():
 		"Merry Christmas and good luck to all! May the odds be ever in your favor! ",
 		"Feeling festive and optimistic! Let's do this! "
 	]
-	#a=0
-	#while a<100000:
-		#b=str(a)
-		#comment='Sick Trickshot on mobile (MUST SEE!!)--> https://www.youtube.com/watch?v=hkNSJ2jMtNk&t=2s '+ b
-		#comment1='This video has great info on this topic--> https://www.youtube.com/watch?v=S1n9NlCDUbo&t=3s '+ b
-		#comment2='https://www.youtube.com/channel/UCuAjoGTTf7iaMixpiEdKFZQ?sub_confirmation=1 '+ b
-		#comment3='https://www.youtube.com/channel/UCuAjoGTTf7iaMixpiEdKFZQ?sub_confirmation=1 pls subscribe '+ b
-		#comments.append(comment)
-		#comments.append(comment1)
-		#comments.append(comment2)
-		#comments.append(comment3)
-		#comment='This video has great info on this topic--> https://www.youtube.com/watch?v=BO6sqPdRDc8&t=2s '+ b
-		#comment1='This video has great info on this topic--> https://www.youtube.com/watch?v=e83xe72_E3E&t=9s '+ b
-		#comment2='https://www.youtube.com/channel/UCuAjoGTTf7iaMixpiEdKFZQ?sub_confirmation=1 '+ b
-		#comment3='https://www.youtube.com/channel/UCuAjoGTTf7iaMixpiEdKFZQ?sub_confirmation=1 pls subscribe '+ b
-		#comments.append(comment)
-		#comments.append(comment1)
-		#comments.append(comment2)
-		#comments.append(comment3)
-		#comment='This video has great info on this topic--> https://www.youtube.com/watch?v=e83xe72_E3E '+ b
-		#comment1='This video has great info on this topic--> https://www.youtube.com/watch?v=S1n9NlCDUbo&t=3s '+ b
-		#comment2='This video has great info on this topic--> https://www.youtube.com/watch?v=ZQ5GYKqkEPg&t=2s '+ b
-		#comment3='This video has great info on this topic--> https://www.youtube.com/watch?v=0tPu7L_dxR4 '+ b
-		#comments.append(comment)
-		#comments.append(comment1)
-		#comments.append(comment2)
-		#comments.append(comment3)
-		#comment='This video has great info on this topic--> https://www.youtube.com/watch?v=BO6sqPdRDc8&t=6s '+ b
-		#comment1='This video has great info on this topic--> https://www.youtube.com/watch?v=6eTLwJVGiR8&t=53s '+ b
-		#comment2='This video has great info on this topic--> https://www.youtube.com/watch?v=e83xe72_E3E '+ b
-		#comment3='This video has great info on this topic--> https://www.youtube.com/watch?v=5-hf1EsDMt0&t=5s '+ b
-		#comments.append(comment)
-		#comments.append(comment1)
-		#comments.append(comment2)
-		#comments.append(comment3)
-		#a+=1
+	for i in range(1000000000):
+		b=str(a)
+		comment="Feeling festive and optimistic! Let's do this! "
+		comment1="Merry Christmas and good luck to all! May the odds be ever in your favor! "
+		comment2="Santa better be bringing laptops this year, because I'm ready! "
+		comment3="Finally, I could edit my videos like a pro! "
+		comments.append(comment)
+		comments.append(comment1)
+		comments.append(comment2)
+		comments.append(comment3)
+		comment="Huge thanks for hosting this amazing giveaway!"
+		comment1="Merry Christmas and good luck to all! May the odds be ever in your favor! "
+		comment2="Santa better be bringing laptops this year, because I'm ready! "
+		comment3="Finally, I could edit my videos like a pro! "
+		comments.append(comment)
+		comments.append(comment1)
+		comments.append(comment2)
+		comments.append(comment3)
+		comment="Feeling festive and optimistic! Let's do this! "
+		comment1="Your generosity is incredible, and I'm crossing my fingers for everyone! "
+		comment2="Santa better be bringing laptops this year, because I'm ready! "
+		comment3="Finally, I could edit my videos like a pro! "
+		comments.append(comment)
+		comments.append(comment1)
+		comments.append(comment2)
+		comments.append(comment3)
+		comment="Feeling festive and optimistic! Let's do this! "
+		comment1="Merry Christmas and good luck to all! May the odds be ever in your favor! "
+		comment2="Winning this laptop would change my life! Goodbye, slow desktop! "
+		comment3="Just entered the giveaway, and wanted to say thank you for spreading holiday cheer! "
+		comments.append(comment)
+		comments.append(comment1)
+		comments.append(comment2)
+		comments.append(comment3)
 # =============================================================================================
 	r = np.random.randint(0, len(comments))
 
@@ -251,5 +249,5 @@ if __name__ == '__main__':
 		if urls == []:
 			print("There is no videos for this keyword at the moment")
 		else:
-			for i in range(1000000000000000):
+			for i in range(100000000000000000000000):
 				comment_page(driver,urls,random_comment())
